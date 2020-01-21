@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--icon cdn-->
+	<script src="https://kit.fontawesome.com/e7e5439d34.js" crossorigin="anonymous"></script>
+	<!--meta required-->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--linking the CSS -->
+    <!--link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/Alert.css')}}"-->
+    <link rel="stylesheet" type="text/css" href="Alert.css">
+	<title>Alert</title>
+</head>
+<body>
+	<div class="bgd">
+   	<div class="navbar-container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="myNavbar">
+    <div class="d-flex flex-grow-1">
+        <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+        <a class="navbar-brand" href="#">
+            Navbar 7
+        </a>
+        <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+            	<a href="#about" class="nav-link" >Alerts</a>
+            </li>
+            <li class="nav-item">
+                <a href="#our projects" class="nav-link">Authorisation</a>
+            </li>
+            <li class="nav-item">
+                <a href="#events" class="nav-link">Grievances</a>
+            </li>
+            <li class="nav-item">
+                <a href="#team" class="nav-link">Forum</a>
+            </li>
+            <li class="nav-item">
+            	<a href="#" class="nav-link">Govt. Schemes</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+</div>
+  <h1>Alert</h1>
+  <div class="container" id="Alert">
+  <!--form class="Alert_input">
+    	
+    	<label class="label" for="Subject"><b>Subject</b></label>
+    	<br>
+    	<input id="Subject" type="text"  placeholder="Enter the Subject" name="Subject" >
+        <br>
+    	<label class="label" for="Details"><b>Details</b></label>
+    	<br>
+        <input id="Details" type="text" placeholder="Enter the Details of Alert" name="Details" >
+        <br>
+    	<label class="label" for="Specifics"><b>Specifics</b></label>
+        <br>
+        <input id="Specifics" type="text" placeholder="Is there any specifications?" name="Specifics" >
+        <br>
+        <label class="label" for="Severity"><b>Severity</b></label>
+        <br>
+        <select>
+        	<option class="high" value="high">High</option>
+        	<option class="moderate" value="moderate">Moderate</option>
+        	<option class="low" value="low">Low</option>
+        </select>
+        <br>
+        <button class="submit">submit</button>
+    </form-->
+    <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset>
+                <label for="Subject"><b>Subject</b></label>
+                <div>
+                    {{ form.name.label(class="Subject") }}
+                    {{ form.name }}
+                </div>
+                <label for="Details"><b>Details</b></label>
+                <div>
+                    {{ form.Details.label( class="Details")}}
+                    {{ form.Details }}
+                </div>
+                <label for="Specifics"><b>Specifics</b></label>
+                <div>
+                    {{ form.Specifics.label( class="Specifics")}}
+                    {{ form.Specifics }}
+                </div>
+                <label for="Severity"><b>Severity</b></label>
+                <div>
+                    {{ form.Severity.label( class="Severity")}}
+                    {{ form.Severity }}
+                </div>
+            </fieldset>
+            <div>
+            	{{ Scheme.submit.label( class="button")}}
+                {{ Scheme.submit() }}
+            </div>
+
+        </form>
+</body>
+</html>
