@@ -7,16 +7,16 @@
 .low{
 	background-color: green;
 }
-.Subject{
+#Subject{
 	width: 500px;
 	background-color: #edede0;
 }
-.Details{
+#Details{
    width: 900px;
    height: 250px;
    background-color: #f9f9da;
 }
-.Specifics{
+#Specifics{
  width: 900px;
  height: 100px;
  background-color: #f5e29e;
