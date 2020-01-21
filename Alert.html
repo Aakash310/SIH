@@ -81,24 +81,20 @@
     <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset>
-                <label for="Subject"><b>Subject</b></label>
+                <label class="label" for="Subject"><b>{{ form.name.label(id="Subject") }}</b></label>
                 <div>
-                    {{ form.name.label(class="Subject") }}
                     {{ form.name }}
                 </div>
-                <label for="Details"><b>Details</b></label>
+                <label class="label" for="Details"><b>{{ form.Details.label( id="Details")}}</b></label>
                 <div>
-                    {{ form.Details.label( class="Details")}}
                     {{ form.Details }}
                 </div>
-                <label for="Specifics"><b>Specifics</b></label>
+                <label class="label" for="Specifics"><b>{{ form.Specifics.label( id="Specifics")}}</b></label>
                 <div>
-                    {{ form.Specifics.label( class="Specifics")}}
                     {{ form.Specifics }}
                 </div>
-                <label for="Severity"><b>Severity</b></label>
+                <label class="label" for="Severity"><b>{{ form.Severity.label( id="Severity")}}</b></label>
                 <div>
-                    {{ form.Severity.label( class="Severity")}}
                     {{ form.Severity }}
                 </div>
             </fieldset>
