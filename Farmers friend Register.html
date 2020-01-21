@@ -60,6 +60,15 @@
                     
                     {{ form.password }}
                 </div>
+		    <label for="confirm_password"><b>{{ form.password.label( class="confirm_password")}}</b></label>
+                <div>
+                    
+                    {{ form.confirm_password }}
+                </div>
+                <label for="gov_id"><b>{{ form.gov_id.label( class="gov_id")}}</b></label>
+                <div>
+                	{{ form.gov_id }}
+                </div>
             </fieldset>
             <div>
             	{{ form.submit.label( class="button")}}
