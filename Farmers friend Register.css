@@ -32,7 +32,7 @@ body, html {
 }
 
 /* Full-width input fields */
-  input[type=text], input[type=password] {
+  .name,.email,.designation,.password,.confirm_password{
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -40,7 +40,23 @@ body, html {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+.name:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.email: focus{
+  background-color: #ddd;
+  outline: none;
+}
+.designation:focus{
+  background-color: #ddd;
+  outline: none;
+}
+.password:focus{
+  background-color: #ddd;
+  outline: none;
+}
+.confirm_password:focus{
   background-color: #ddd;
   outline: none;
 }
